@@ -1,0 +1,1 @@
+# algoritimo_calc_reta_r2
