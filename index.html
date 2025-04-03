@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equação da Reta e R²</title>
+    <title>Regressão Linear a partir de CSV</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-    <h1>Equação da Reta e Coeficiente de Determinação (R²)</h1>
+    <h1>Carregar Arquivo CSV para Regressão Linear</h1>
 
-    <h2>Carregar arquivo CSV:</h2>
+    <label for="file-input">Selecione o arquivo CSV:</label>
     <input type="file" id="file-input" accept=".csv" onchange="lerArquivo(event)">
 
-    <h3>Pontos Inseridos:</h3>
+    <h3>Pontos Carregados:</h3>
     <ul id="pontos-list"></ul>
 
     <button onclick="calcularEquacao()">Calcular Equação e R²</button>
 
     <h3>Resultado:</h3>
     <div id="resultado"></div>
+
+    <!-- Adicionando uma área de erro para mensagens -->
+    <div id="erro-msg" style="color: red; display: none;">
+        <p>Erro: Certifique-se de que o arquivo CSV contenha dados válidos.</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
